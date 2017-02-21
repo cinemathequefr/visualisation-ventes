@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.4/papaparse.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>La Cinémathèque française - Visualisation des ventes cinéma</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Visualisation des ventes cinéma</h1>
+      <div class="info">
+        <h2>Instructions</h2>
+        <ol>
+          <li>Se connecter à l'outil d'extraction Digitick : <a href="http://admin.digitick.com">http://admin.digitick.com</a></li>
+          <li>Choisir la période d'export (date de début et date de fin) et cliquer sur "+"</li>
+          <li>Cliquer sur "Ajouter la requête"</li>
+          <li>
+            Sélectionner au minimum les champs&nbsp;:
+            <ul>
+              <li>Transaction &gt; Canal de vente &gt; ID</li>
+              <li>Place &gt; Produit &gt; Nom</li>
+              <li>Place &gt; Représentation &gt; Début</li>
+              <li>Place &gt; Lieu &gt; ID</li>
+              <li>Place &gt; Tarif &gt; ID</li>
+            </ul>
+          </li>
+          <li>Cliquer sur "Effectuer l'export"</li>
+          <li>Cliquer sur l'icône "TXT" pour enregistrer le résultat de l'export (fichier .csv) sur votre disque dur</li>
+          <li>Glisser/déposer le fichier dans la zone ci-dessous</li>
+        </ol>
+        <div class="dropzone">Déposer ou sélectionner le fichier .csv</div>
+        <input id="file" type="file" accept=".csv">
+      </div>
+      <div class="result"></div>
+    </div>
+  </body>
+</html>
